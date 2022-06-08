@@ -1,0 +1,223 @@
+footer{
+  width: 100%;
+  background-color: $bgColor;
+
+  .footer-container{
+    width: 1780px;
+    margin: 0 auto;
+    background-color: $whiteBgColor;
+    border-radius: 100px 100px 0 0;
+    padding-top: 100px;
+
+    .footer-wrapp{
+      width: 1170px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .footer-column{
+    display: flex;
+    flex-direction: column;
+  }
+  .social-column{
+    max-width: 205px;
+  }
+
+  .footer-logo{
+    width: 79px;
+    height: 75px;
+    margin-bottom: 16px;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .footer-logo-text{
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: $textSize15;
+    line-height: 24px;
+    color: #888CA5;
+    text-align: left;
+  }
+
+  .footer-social-icons-container{
+    .footer-social-icons-title{
+      font-weight: 500;
+      font-size: $textSize;
+      line-height: 20px;
+      color: $textColor;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .footer-social-icons{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      a{
+        text-decoration: none;
+
+        &:not(:last-of-type){
+          margin-right: 18px;
+        }
+        cursor: pointer;
+        svg{
+          width: 44px;
+          height: 44px;
+        }
+      }
+    }
+  }
+}
+
+.service-column{
+  .footer-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:not(:last-of-type){
+      margin-bottom: 58px;
+    }
+
+    .footer-menu-title {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 20px;
+      color: $textColor;
+      margin-bottom: 56px;
+      position: relative;
+
+      &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: #1EB47E;
+        border-radius: 3px;
+        bottom: -25px;
+        left: calc(50% - 3px);
+      }
+    }
+
+    .footer-menu-list{
+      display: flex;
+      align-items: center;
+
+      li{
+        &:not(:last-of-type){
+          margin-right: 28px;
+        }
+
+        a{
+          font-weight: 400;
+          font-size: $textSize;
+          line-height: 19px;
+          text-align: center;
+          color: #888CA5;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+}
+
+.feedback-column{
+  max-width: 230px;
+  align-items: flex-end;
+
+  .footer-fphone{
+    text-align: right;
+    margin-bottom: 10px;
+
+    a{
+      font-weight: 500;
+      font-size: $textSize18;
+      line-height: 21px;
+      color: $textColor;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  .feedback-btn-wrapp {
+    margin-bottom: 10px;
+    a{
+      font-weight: 500;
+      font-size: $textSize;
+      line-height: 24px;
+      text-align: right;
+      text-decoration-line: underline;
+      color: $blueLinkColor;
+      cursor: pointer;
+    }
+  }
+
+  .feedback-text{
+    font-weight: 400;
+    font-size: $textSize15;
+    line-height: 24px;
+    text-align: right;
+    color: #888CA5;
+    margin-bottom: 42px;
+  }
+
+  .footer-downloade-title{
+    margin-bottom: 20px;
+    h4{
+      font-weight: 500;
+      font-size: $textSize;
+      line-height: 24px;
+      text-align: right;
+      color: $textColor;
+    }
+  }
+  .footer-downloade-icons{
+    display: flex;
+    justify-content: flex-end;
+
+    a{
+      cursor: pointer;
+      outline: none;
+      text-decoration: none;
+
+      img{
+        width: 54px;
+        height: 54px;
+        object-fit: cover;
+      }
+
+      &:not(:first-of-type){
+        margin-left: 16px;
+      }
+    }
+    
+  }
+}
+.footer-copy-container{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(58.02deg, #13B07F -27.88%, #13B672 76.75%, #00A06D 127.84%);
+
+  p{
+    font-weight: 400;
+    font-size: $textSize;
+    line-height: 19px;
+    color: $whiteTextColor;
+    margin: 0;
+    padding: 0;
+  }
+}

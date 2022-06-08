@@ -1,0 +1,127 @@
+
+#delivery-address-modal,
+#edit-delivery-address-modal {
+  display: none; 
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(5, 5, 5, 0.15);
+
+
+  .modal-content {
+    background-color: $whiteBgColor;
+    border-radius: $borderRadius;
+    margin: 160px auto 15%; 
+    padding: 40px 26px;
+    width: 518px;
+    height: 224px;
+    position: relative;
+  
+    .close {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: $whiteBgColor;
+      position: absolute;
+      top: 0;
+      right: -66px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    
+      svg{
+        width: 10px;
+        height: 10px;
+        object-fit: cover;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .delivery-address-form-title{
+      text-align: center;
+      margin-bottom: 12px;
+
+      h4{
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 30px;
+        color: $textColor;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .delivery-address-form-text{
+      text-align: center;
+      margin-bottom: 16px;
+
+      p{
+        max-width: 306px;
+        margin: 0 auto;
+        padding: 0;
+        font-weight: 400;
+        font-size: $textSize15;
+        line-height: 22px;
+        text-align: center;
+        color: #696683;
+      }
+    }
+
+    .delivery-address-form-inputs-wrapp{
+      width: 100%;
+      margin-bottom: 16px;
+
+      input{
+        width: calc(100% - 36px);
+        padding: 12px 18px;
+        background: $bgColor;
+        border: 1px solid #E8ECFD;
+        border-radius: 12px;
+        font-weight: 400;
+        font-size: $textSize15;
+        line-height: 30px;
+        color: $textColor;
+        
+        &::placeholder ,
+        &:-ms-input-placeholder ,
+        &::-ms-input-placeholder { 
+          color: #A5A8B9;
+        }
+      }
+
+    }
+
+    .delivery-address-btn{
+      width: 318px;
+      padding: 12px 0;
+      font-weight: 700;
+      font-size: $textSize15;
+      line-height: 30px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.4);
+      background: $btnBgColor;
+      border: none;
+      border-radius: $btnBorderRadius;
+      margin: 0 auto;
+
+    }
+
+
+  }
+}
+
+#edit-delivery-address-modal {
+  .modal-content {
+    height: 194px;
+  }
+}

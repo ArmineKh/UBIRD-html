@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+$bgColor: #F7F7F7;
+$grayBgColor: #EFEFEF;
+$darkGrayBgColor: #EDEDED;
+$whiteBgColor: #FFFFFF;
+$textColor: #222C54;
+$brightTextColor: #696683;
+$inputTextColor: #A5A8B9;
+$weightColor: #9FA1AE;
+$whiteTextColor: #FFFFFF;
+$blueLinkColor: #0FABEE;
+$greenTextColor: #12B575;
+$btnBgColor: linear-gradient(253.46deg, #13B07F -2%, #13B672 71.71%, #00A06D 107.71%);
+$discountColor: #F52658;
+
+$textSize14: 14px;
+$textSize15: 15px;
+$textSize: 16px;
+$textSize18: 18px;
+$titleSize: 60px;
+$subTitleSize: 32px;
+
+$borderRadius: 20px;
+$btnBorderRadius: 69px;
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  overflow-x: hidden;
+  outline: none!important;
+}
+
+ol, ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul{
+  li{
+    list-style: none;
+  }
+} 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span{
+  margin: 0;
+  padding: 0;
+}
+
+@import 'header';
+@import 'footer';
+@import 'homeMainContent';
+@import 'feedbackModal';
+@import 'deliveryAddressModal';
+@import 'productCardModal';
+@import 'catalogMainContent';
+@import 'cartModal';
+@import 'checkoutMainContent';
+@import 'errorModal';
+@import 'contactsMainContent';
+
+
+
+

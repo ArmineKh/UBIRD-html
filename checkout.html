@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UBird</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="flex-container">
+      <div class="logo-container">
+        <a href="#">
+          <img class="logo" src="./img/UBirdlogo1.svg" alt="Logo" />
+        </a>
+      </div>
+      <div class="delivery-catalog-container">
+        <div class="catalog-icon" id="delivery-catalog">
+          <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M2 4C0.895431 4 0 3.10457 0 2C0 0.895431 0.895431 0 2 0H30C31.1046 0 32 0.895431 32 2C32 3.10457 31.1046 4 30 4H2ZM0 12C0 13.1046 0.895431 14 2 14H20C21.1046 14 22 13.1046 22 12C22 10.8954 21.1046 10 20 10H2C0.89543 10 0 10.8954 0 12ZM2 24C0.895431 24 0 23.1046 0 22C0 20.8954 0.89543 20 2 20H8C9.10457 20 10 20.8954 10 22C10 23.1046 9.10457 24 8 24H2ZM16 24C14.8954 24 14 23.1046 14 22C14 20.8954 14.8954 20 16 20H30C31.1046 20 32 20.8954 32 22C32 23.1046 31.1046 24 30 24H16Z" fill="url(#paint0_linear_813_9913)"/>
+            <defs>
+            <linearGradient id="paint0_linear_813_9913" x1="1.33333" y1="2" x2="32" y2="2" gradientUnits="userSpaceOnUse">
+            <stop offset="100%" stop-color="#F02254"/>
+            <stop offset="1" stop-color="#FB2A5C"/>
+            </linearGradient>
+            </defs>
+          </svg>
+          <span>Каталог доставки</span>
+        </div>
+        <div class="delivery-catalog-contenet">
+          <div class="catalog-btn-container">
+            <button class="btn show-all active">Все</button>
+            <button class="btn shops">Магазины</button>
+            <button class="btn establishments">Заведения</button>
+            <button class="btn pharmacies">Аптеки</button>
+          </div>
+        
+          <div class="filtered-container">
+            <div class="filtered-div"  data-pharmacies="pharmacies">
+              <div class="filtered-div-logo">
+                <img src="./img/Rectangle244.png" alt="">
+              </div>
+              <div class="filtered-div-time">
+                <span>07:00 - 20:30</span>
+              </div>
+            </div>
+            <div class="filtered-div"  data-shops="shops">
+              <div class="filtered-div-logo">
+                <img src="./img/Rectangle244(1).png" alt="">
+              </div>
+              <div class="filtered-div-time">
+                <span>07:00 - 20:30</span>
+              </div>
+            </div>
+            <div class="filtered-div"  data-shops="shops">
+              <div class="filtered-div-logo">
+                <img src="./img/Rectangl24(2).png" alt="">
+              </div>
+              <div class="filtered-div-time">
+                <span>07:00 - 20:30</span>
+              </div>
+            </div>
+            <div class="filtered-div"  data-pharmacies="pharmacies">
+              <div class="filtered-div-logo">
+                <img src="./img/Rectangl24(3).png" alt="">
+              </div>
+              <div class="filtered-div-time">
+                <span>07:00 - 20:30</span>
+              </div>
+            </div>
+            <div class="filtered-div"  data-establishments="establishments">
+              <div class="filtered-div-logo">
+                <img src="./img/Rectangl24(4).png" alt="">
+              </div>
+              <div class="filtered-div-time">
+                <span>07:00 - 20:30</span>
+              </div>
+            </div>
+            <div class="filtered-div"  data-establishments="establishments">
+              <div class="filtered-div-logo">
+                <img src="./img/Rectangl24(5).png" alt="">
+              </div>
+              <div class="filtered-div-time">
+                <span>07:00 - 20:30</span>
+              </div>
+            </div>
+            <div class="filtered-div"  data-pharmacies="pharmacies">
+              <div class="filtered-div-logo">
+                <img src="./img/Rectangle244(6).png" alt="">
+              </div>
+              <div class="filtered-div-time">
+                <span>07:00 - 20:30</span>
+              </div>
+            </div>
+            <div class="filtered-div"  data-shops="shops">
+              <div class="filtered-div-logo">
+                <img src="./img/Rectangle244(7).png" alt="">
+              </div>
+              <div class="filtered-div-time">
+                <span>07:00 - 20:30</span>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-close-btn-container">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2.00017 11.9998" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M12 12L2.00017 2.00024" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="trucking">
+        <a href="#">Грузоперевозки</a>
+      </div>
+
+      <div class="lang-container">
+        <span>Ru</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="checkout-title-block">
+      <h2>Оформление заказа</h2>
+    </div>
+
+    <div class="checkout-form-order-sidebar-container">
+      <form action="post">
+        <div class="checkout-form-container">
+          <div class="phone-input-wrapp">
+            <label for="phone">Ваш номер телефона</label>
+            <input type="text" name="phone" id="phone" placeholder="+374 (93) 123-456">
+            <button>Изменить</button>
+          </div>
+
+          <div class="address-input-wrapp">
+            <label for="address">Адрес доставки</label>
+            <input type="text" name="address" id="address" placeholder="г. Ереван, улица Тер-Григоряна, 5">
+            <div class="address-flat-inputs-wrapp">
+              <input type="text" name="entrance" id="entrance" placeholder="Подъезд">
+              <input type="text" name="intercom" id="intercom" placeholder="Домофон">
+              <input type="text" name="flat" id="flat" placeholder="Квартира">
+              <input type="text" name="floor" id="floor" placeholder="Этаж">
+
+            </div>
+          </div>
+
+          <div class="out-stock-select-wrapp">
+            <label for="out-stock-select">Что делать, если товара нет в наличии?</label>
+            <select id="out-stock-select">
+              <option value="#" selected="selected">Позвоните мне. Если не удалось дозвониться - убрать товар.</option>
+              <option value="#">One</option>
+              <option value="#">Two</option>
+              <option value="#">Three</option>
+            </select>
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L5.975 5L9.95 2" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="additional-textarea-wrapp">
+            <label for="additional">Дополительно</label>
+            <textarea name="additional" id="additional" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
+          </div>
+
+          <div class="payment-checkboxes-wrapp">
+            <div class="payment-checkbox-item">
+              <input type="checkbox" id="online-payment" checked/>
+              <div>
+                <span>
+                  Онлайн оплата
+                </span>
+              </div>
+            </div>
+            <div class="payment-checkbox-item">
+              <input type="checkbox" id="card-payment" />
+              <div>
+                <span>
+                  Картой курьеру
+                </span>
+              </div>
+            </div>
+            <div class="payment-checkbox-item">
+              <input type="checkbox" id="cash-payment" />
+              <div>
+                <span>
+                  Наличными
+                </span>
+              </div>
+            </div>
+          </div>
+
+            <div class="ordering-info-wrapp">
+              <div class="ordering-info-icon">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 9.45312V13.0895" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+                  <path d="M9 5.36328V6.27237" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+                  <circle cx="9" cy="9" r="8" stroke="#222C54" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="ordering-info-text">
+                После оформления заказа мы спишем и вернем один рубль для проверки карты. Полная сумма 
+                будет списана после сборки заказа.
+              </div>
+            </div>
+
+            <div class="card-info-wrapp">
+              <div class="card-number-wrapp">
+                <input type="text" id="card-number" placeholder="Номер карты">
+              </div>
+
+              <div class="card-valid-info-wrapp">
+                <input type="text" id="card-mm" placeholder="ММ">
+                <input type="text" id="card-gggg" placeholder="ГГГГ">
+                <input type="text" id="card-ccv" placeholder="CVV">
+              </div>
+
+              <div class="card-name-wrapp">
+                <input type="text" id="card-name" placeholder="Имя латиницей (IVAN IVANOV)">
+              </div>
+            </div>
+
+  
+        </div>
+        <div class="order-sidebar-container">
+          <div class="order-img-wrapp">
+            <img src="./img/Rectangle244(2).png" alt="сыроедов">
+          </div>
+          <div class="order-select-delivery-time-wrapp">
+            <div class="select-box">
+              <div class="select-box-current" tabindex="0">
+
+                <div class="select-box-value">
+                  <input class="select-box-input" type="radio" id="0" value="0" name="delivery-time" checked="checked" disabled/>
+                  <p class="select-box-input-text">Выберите время доставки</p>
+                </div>
+                <div class="select-box-value">
+                  <input class="select-box-input" type="radio" id="1" value="1" name="delivery-time" />
+                  <p class="select-box-input-text"><span style="display: block;">Время доставки:</span>07:00 - 8:00</p>
+                </div>
+                <div class="select-box-value">
+                  <input class="select-box-input" type="radio" id="2" value="2" name="delivery-time"/>
+                  <p class="select-box-input-text"><span style="display: block;">Время доставки:</span>09:00 - 10:00</p>
+                </div>
+                <div class="select-box-value">
+                  <input class="select-box-input" type="radio" id="3" value="3" name="delivery-time"/>
+                  <p class="select-box-input-text"><span style="display: block;">Время доставки:</span>11:00 - 12:00</p>
+                </div>
+                <div class="select-box-value">
+                  <input class="select-box-input" type="radio" id="4" value="4" name="delivery-time"/>
+                  <p class="select-box-input-text"><span style="display: block;">Время доставки:</span>13:00 - 14:00</p>
+                </div>
+                <div class="select-box-value">
+                  <input class="select-box-input" type="radio" id="5" value="5" name="delivery-time"/>
+                  <p class="select-box-input-text"><span style="display: block;">Время доставки:</span>15:00 - 16:00</p>
+                </div>
+                <div class="select-box-value">
+                  <input class="select-box-input" type="radio" id="6" value="6" name="delivery-time"/>
+                  <p class="select-box-input-text"><span style="display: block;">Время доставки:</span>17:00 - 18:00</p>
+                </div>
+                <div class="select-box-value">
+                  <input class="select-box-input" type="radio" id="7" value="7" name="delivery-time"/>
+                  <p class="select-box-input-text"><span style="display: block;">Время доставки:</span>19:00 - 20:00</p>
+                </div>
+                <div class="select-box-value">
+                  <input class="select-box-input" type="radio" id="8" value="8" name="delivery-time"/>
+                  <p class="select-box-input-text"><span style="display: block;">Время доставки:</span>21:00 - 22:00</p>
+                </div>
+                <div class="select-box-value">
+                  <input class="select-box-input" type="radio" id="9" value="9" name="delivery-time"/>
+                  <p class="select-box-input-text"><span style="display: block;">Время доставки:</span>23:00 - 24:00</p>
+                </div>
+                  <img class="select-box-icon" src="./img/arrowdown.png" alt="Arrow Icon" aria-hidden="true"/>
+              </div>
+              <ul class="select-box-list">
+                <li>
+                  <label class="select-box-option" for="1" aria-hidden="true">07:00 - 8:00</label>
+                </li>
+                <li>
+                  <label class="select-box-option" for="2" aria-hidden="true">09:00 - 10:00</label>
+                </li>
+                <li>
+                  <label class="select-box-option" for="3" aria-hidden="true">11:00 - 12:00</label>
+                </li>
+                <li>
+                  <label class="select-box-option" for="4" aria-hidden="true">13:00 - 14:00</label>
+                </li>
+                <li>
+                  <label class="select-box-option" for="5" aria-hidden="true">15:00 - 16:00</label>
+                </li>
+                <li>
+                  <label class="select-box-option" for="6" aria-hidden="true">17:00 - 18:00</label>
+                </li>
+                <li>
+                  <label class="select-box-option" for="7" aria-hidden="true">19:00 - 20:00</label>
+                </li>
+                <li>
+                  <label class="select-box-option" for="8" aria-hidden="true">21:00 - 22:00</label>
+                </li>
+                <li>
+                  <label class="select-box-option" for="9" aria-hidden="true">23:00 - 24:00</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="added-items-count-ammount-wrapp">
+            <div class="added-items-count">
+              Позиций добавленно: 3 (4.5 кг)
+            </div>
+            <div class="added-items-ammount">
+              145 800 <span>AMD</span>
+            </div>
+          </div>
+          <div class="delivery-ammount-wrapp">
+            Доставка: <span>1 700 <span>AMD</span></span>
+          </div>
+
+          <button type="submit" class="btn-order-submit">Заказать <span>147 500 <span>AMD</span></span></button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-wrapp">
+
+        <div class="footer-column social-column">
+          <div class="footer-logo">
+            <a href="/">
+              <img src="./img/UBirdlogo21.svg" alt="logo">
+            </a>
+          </div>
+
+          <div class="footer-logo-text">
+            <p>Наш сервис самый лучший и прекрасней всеx!</p>
+          </div>
+
+          <div class="footer-social-icons-container">
+            <div class="footer-social-icons-title">
+              <h4>Мы в соц. сетях:</h4>
+            </div>
+            <div class="footer-social-icons">
+              <a href="#">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="22" cy="22" r="22" fill="url(#paint0_linear_3860_1092)"/>
+                  <path d="M23.0652 28.4118C23.6234 28.4118 23.8517 28.0397 23.8452 27.5731C23.8168 25.8158 24.4998 24.8698 25.7327 26.1027C27.0967 27.4667 27.379 28.4118 29.0354 28.4118H31.9688C32.7094 28.4118 33.0009 28.1735 33.0009 27.7995C33.0009 27.0084 31.6983 25.6123 30.5947 24.5875C29.0492 23.1529 28.9767 23.119 30.3077 21.392C31.9587 19.2479 34.1183 16.5007 32.208 16.5007H28.5588C27.8511 16.5007 27.7997 16.8994 27.5477 17.4934C26.6356 19.6448 24.9022 22.4315 24.244 22.0052C23.5556 21.5607 23.8709 19.7997 23.9232 17.1827C23.9369 16.4915 23.9332 16.0176 22.8772 15.7719C22.3007 15.639 21.7397 15.584 21.219 15.584C19.1354 15.584 17.6981 16.4576 18.5148 16.6097C19.9549 16.8783 19.8165 19.9941 19.481 21.3397C18.8962 23.6827 16.698 19.4844 15.7822 17.3935C15.5613 16.8912 15.4935 16.5007 14.7052 16.5007H11.7214C11.2704 16.5007 11 16.6473 11 16.9737C11 17.5255 13.7133 23.1337 16.3038 25.9295C18.8302 28.6566 21.3272 28.4118 23.0652 28.4118Z" fill="url(#paint1_linear_3860_1092)"/>
+                  <defs>
+                  <linearGradient id="paint0_linear_3860_1092" x1="2.75" y1="34.375" x2="39.4167" y2="9.16667" gradientUnits="userSpaceOnUse">
+                  <stop offset="100%" stop-color="#4D76A1"/>
+                  <stop offset="1" stop-color="#6499D1"/>
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_3860_1092" x1="22.0005" y1="15.584" x2="22.0005" y2="28.4175" gradientUnits="userSpaceOnUse">
+                  <stop offset="100%" stop-color="white"/>
+                  <stop offset="1" stop-color="#F8F8F8"/>
+                  </linearGradient>
+                  </defs>
+                </svg>
+              </a>
+
+              <a href="#">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 0C9.84762 0 0 9.84762 0 22C0 34.1524 9.84762 44 22 44C34.1524 44 44 34.1524 44 22C44 9.84762 34.1524 0 22 0Z" fill="url(#paint0_radial_3860_1095)"/>
+                  <path d="M21.9987 13.792C24.6563 13.792 24.969 13.792 26.0633 13.8702C27.0013 13.9483 27.5484 14.1046 27.9392 14.1828C28.4082 14.3391 28.7209 14.5736 29.1117 14.9645C29.4244 15.2771 29.6589 15.668 29.8934 16.1369C30.0497 16.5278 30.206 16.9968 30.206 18.0129C30.2842 19.0291 30.2842 19.4199 30.2842 22.0775C30.2842 24.7351 30.2842 25.0478 30.206 26.1421C30.1279 27.0801 29.9715 27.6273 29.8934 28.0181C29.737 28.4871 29.5026 28.7997 29.1117 29.1906C28.7991 29.5032 28.4082 29.7377 27.9392 29.9722C27.5484 30.1285 27.0794 30.2849 26.0633 30.2849C25.0471 30.363 24.6563 30.363 21.9987 30.363C19.3411 30.363 19.0284 30.363 17.9341 30.2849C16.9961 30.2067 16.4489 30.0504 16.0581 29.9722C15.5891 29.8159 15.2765 29.5814 14.8856 29.1906C14.573 28.8779 14.3385 28.4871 14.104 28.0181C13.9476 27.6273 13.7913 27.1583 13.7913 26.1421C13.7131 25.126 13.7131 24.7351 13.7131 22.0775C13.7131 19.4199 13.7131 19.1072 13.7913 18.0129C13.8695 17.0749 14.0258 16.5278 14.104 16.1369C14.2603 15.668 14.4948 15.3553 14.8856 14.9645C15.1983 14.6518 15.5891 14.4173 16.0581 14.1828C16.4489 14.0265 16.9179 13.8702 17.9341 13.8702C19.0284 13.792 19.3411 13.792 21.9987 13.792ZM21.9987 11.9942C19.2629 11.9942 18.9502 11.9942 17.8559 12.0723C16.7616 12.1505 16.0581 12.3068 15.4328 12.5413C14.8075 12.7758 14.1821 13.1667 13.635 13.7138C13.0878 14.261 12.7752 14.8081 12.4625 15.5116C12.228 16.1369 12.0717 16.8404 11.9935 17.9347C11.9153 19.0291 11.9153 19.3417 11.9153 22.0775C11.9153 24.8133 11.9153 25.126 11.9935 26.2203C12.0717 27.3146 12.228 28.0181 12.4625 28.6434C12.697 29.2687 13.0878 29.8941 13.635 30.4412C14.1821 30.9884 14.7293 31.301 15.4328 31.6137C16.0581 31.8482 16.7616 32.0045 17.8559 32.0827C18.9502 32.0045 19.2629 32.0045 21.9987 32.0045C24.7345 32.0045 25.0471 32.0045 26.1414 31.9264C27.2358 31.8482 27.9392 31.6919 28.5646 31.4574C29.1899 31.2229 29.8152 30.832 30.3624 30.2849C30.9095 29.7377 31.2222 29.1906 31.5349 28.4871C31.7693 27.8618 31.9257 27.1583 32.0038 26.0639C32.082 24.9696 32.082 24.657 32.082 21.9212C32.082 19.1854 32.082 18.8727 32.0038 17.7784C31.9257 16.6841 31.7693 15.9806 31.5349 15.3553C31.3004 14.73 30.9095 14.1046 30.3624 13.5575C29.8152 13.0103 29.2681 12.6977 28.5646 12.385C27.9392 12.1505 27.2358 11.9942 26.1414 11.916C25.0471 11.9942 24.7345 11.9942 21.9987 11.9942Z" fill="url(#paint1_linear_3860_1095)" stroke="white" stroke-width="0.3"/>
+                  <path d="M21.9987 16.957C19.2487 16.957 16.957 19.1723 16.957 21.9987C16.957 24.8251 19.1723 27.0404 21.9987 27.0404C24.8251 27.0404 27.0404 24.8251 27.0404 21.9987C27.0404 19.1723 24.7487 16.957 21.9987 16.957ZM21.9987 25.2834C20.1654 25.2834 18.714 23.832 18.714 21.9987C18.714 20.1654 20.1654 18.714 21.9987 18.714C23.832 18.714 25.2834 20.1654 25.2834 21.9987C25.2834 23.832 23.832 25.2834 21.9987 25.2834Z" fill="url(#paint2_linear_3860_1095)" stroke="white" stroke-width="0.3"/>
+                  <path d="M27.4056 17.9668C28.165 17.9668 28.7806 17.3512 28.7806 16.5918C28.7806 15.8324 28.165 15.2168 27.4056 15.2168C26.6462 15.2168 26.0306 15.8324 26.0306 16.5918C26.0306 17.3512 26.6462 17.9668 27.4056 17.9668Z" fill="url(#paint3_linear_3860_1095)"/>
+                  <defs>
+                  <radialGradient id="paint0_radial_3860_1095" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(7.37409 45.0939) scale(42.5379)">
+                  <stop offset="100%" stop-color="#FFD676"/>
+                  <stop offset="0.2463" stop-color="#F2A454"/>
+                  <stop offset="0.3793" stop-color="#F05C3C"/>
+                  <stop offset="0.6995" stop-color="#C22F86"/>
+                  <stop offset="0.9568" stop-color="#6666AD"/>
+                  <stop offset="0.9852" stop-color="#5C6CB2"/>
+                  </radialGradient>
+                  <linearGradient id="paint1_linear_3860_1095" x1="21.9987" y1="11.916" x2="21.9987" y2="32.0827" gradientUnits="userSpaceOnUse">
+                  <stop offset="100%" stop-color="white"/>
+                  <stop offset="1" stop-color="#F8F8F8"/>
+                  </linearGradient>
+                  <linearGradient id="paint2_linear_3860_1095" x1="21.9987" y1="16.957" x2="21.9987" y2="27.0404" gradientUnits="userSpaceOnUse">
+                  <stop offset="100%" stop-color="white"/>
+                  <stop offset="1" stop-color="#F8F8F8"/>
+                  </linearGradient>
+                  <linearGradient id="paint3_linear_3860_1095" x1="27.4056" y1="15.2168" x2="27.4056" y2="17.9668" gradientUnits="userSpaceOnUse">
+                  <stop offset="100%" stop-color="white"/>
+                  <stop offset="1" stop-color="#F8F8F8"/>
+                  </linearGradient>
+                  </defs>
+                  </svg>
+              </a>
+
+              <a href="#">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="22" cy="22" r="22" fill="url(#paint0_linear_3860_1088)"/>
+                  <path d="M20.1249 14.4744C21.0439 13.7158 22.3511 13.4596 23.5842 13.4277C24.8883 13.4175 26.1919 13.4237 27.496 13.4241C27.5012 14.6167 27.5016 15.8097 27.4955 17.0022C26.6527 17.0009 25.8093 17.0039 24.9665 17.0009C24.4321 16.972 23.8833 17.3232 23.7862 17.7824C23.7734 18.5804 23.7816 19.3788 23.7821 20.1768C25.0182 20.1812 26.2543 20.1754 27.4904 20.1794C27.3999 21.3338 27.2347 22.4829 27.0409 23.6276C25.949 23.6364 24.8565 23.6267 23.7648 23.6325C23.755 27.0372 23.7698 28.0847 23.7571 31.4894C22.1353 31.4951 20.5126 31.4867 18.8909 31.4933C18.8602 28.0882 18.8934 27.0385 18.874 23.6329C18.0828 23.6258 17.2911 23.6378 16.5 23.6272C16.503 22.4825 16.501 21.3379 16.5015 20.1937C17.2921 20.1853 18.0833 20.1955 18.874 20.1888C18.898 19.0761 18.8499 17.962 18.8991 16.8502C18.9783 15.9697 19.3655 15.0826 20.1249 14.4744Z" fill="url(#paint1_linear_3860_1088)"/>
+                  <defs>
+                  <linearGradient id="paint0_linear_3860_1088" x1="4.125" y1="33.4583" x2="38.5" y2="8.25" gradientUnits="userSpaceOnUse">
+                  <stop offset="100%" stop-color="#3B5998"/>
+                  <stop offset="1" stop-color="#4D72C0"/>
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_3860_1088" x1="22" y1="13.4219" x2="22" y2="31.4933" gradientUnits="userSpaceOnUse">
+                  <stop offset="100%" stop-color="white"/>
+                  <stop offset="1" stop-color="#F8F8F8"/>
+                  </linearGradient>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-column service-column">
+          <div class="footer-service-menu-container footer-menu">
+            <div class="footer-menu-title">
+              <h4>Наш сервис</h4>
+            </div>
+            <ul class="footer-menu-list">
+              <li><a href="#">О компании</a></li>
+              <li><a href="">Контакты</a></li>
+              <li><a href="#">Юр. лицам</a></li>
+              <li><a href="#">Документы</a></li>
+            </ul>
+          </div>
+          <div class="footer-help-menu-container footer-menu">
+            <div class="footer-menu-title">
+              <h4>Помощь покупателю</h4>
+            </div>
+            <ul class="footer-menu-list">
+              <li><a href="#">Как мы работаем</a></li>
+              <li><a href="">Зоны доставки</a></li>
+              <li><a href="#">Частые вопросы</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-column feedback-column">
+          <div class="footer-fphone">
+            <a href="tel:++37493654321">+374 (93) 654-321</a>
+          </div>
+          <div class="feedback-btn-wrapp">
+            <a id="feedback-btn" >Обратная связь</a>
+          </div>
+          <div class="feedback-text">
+            <p>Прием звонков и оформление заявок круглосуточно.</p>
+          </div>
+          <div class="footer-downloade-wrapp">
+            <div class="footer-downloade-title">
+              <h4>Скачайте наше приложение</h4>
+            </div>
+            <div class="footer-downloade-icons">
+              <a href="#">
+                <img src="./img/GooglePlay.svg" alt="Google Play">
+              </a>
+              <a href="#">
+                <img src="./img/AppStore-2.svg" alt="App Store">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-copy-container">
+        <p>© 2020. UBird. Все права защищены</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="feedback-modal" class="feedback-modal">
+    <div class="modal-content">
+      <span class="close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.9999 2L2.00005 11.9998" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M11.9999 12L2.00005 2.00024" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <form action="post">
+        <div class="feedback-form-title">
+          <h4>Обратная связь</h4>
+        </div>
+        <div class="feedback-form-inputs-wrapp">
+          <input class="feedback-input" type="text" name="subject" placeholder="Тема обращения">
+          <input class="feedback-input" type="text" name="name" placeholder="Имя">
+          <input class="feedback-input" type="email" name="email" placeholder="E-mail">
+          <textarea name="message" class="feedback-input"   placeholder="Ваше сообщение"></textarea>
+        </div>
+        <input class="btn feedback-btn" type="submit" value="Отправить">
+        <label class="policy-check">
+          Соглашаюсь с <a href="#">политикой конфиденциальности</a> 
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+      </form>
+    </div>
+  </div>
+
+  <div id="cart-modal" class="cart-modal">
+    <div class="modal-content">
+      <span class="close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.9999 2L2.00005 11.9998" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M11.9999 12L2.00005 2.00024" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+        <div class="cart-modal-title">
+          <h4>Моя корзина</h4>
+          <button class="cleare-cart-btn"><i><img src="./img/Icondelete.svg" alt=""></i>Очистить</button>
+        </div>
+        <div class="cart-modal-content">
+
+          <div class="cart-category-title">
+            Сыроедов
+          </div>
+          <ul class="cart-items">
+            <li class="cart-item" style="overflow-x: hidden;">
+              <div class="cart-item-img">
+                <img src="./img/Rectangle259.svg" alt="">
+              </div>
+              <div class="cart-item-title-weight">
+                <div class="cart-item-title">Овёс "Образ Жизни Алтая" голозёрный</div>
+                <div class="cart-item-weight">500г</div>
+              </div>
+              <div class="cart-item-count-pluse-minus-container">
+                <span class="cart-item-minus-btn">-</span>
+                <input type="text" value="1">
+                <span class="cart-item-plus-btn">+</span>
+              </div>
+              <div class="cart-item-ammount">
+                48 600 <span>AMD</span>
+              </div>
+              <div class="cart-item-remove-btn">
+                <button>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2.00017 11.9998" stroke="#A5A8B9" stroke-width="2.2" stroke-linecap="round"/>
+                    <path d="M12 12L2.00017 2.00024" stroke="#A5A8B9" stroke-width="2.2" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="cart-item" style="overflow-x: hidden;">
+              <div class="cart-item-img">
+                <img src="./img/Rectangle259.svg" alt="">
+              </div>
+              <div class="cart-item-title-weight">
+                <div class="cart-item-title">Овёс "Образ Жизни Алтая" голозёрный</div>
+                <div class="cart-item-weight">500г</div>
+              </div>
+              <div class="cart-item-count-pluse-minus-container">
+                <span class="cart-item-minus-btn">-</span>
+                <input type="text" value="1">
+                <span class="cart-item-plus-btn">+</span>
+              </div>
+              <div class="cart-item-ammount">
+                48 600 <span>AMD</span>
+              </div>
+              <div class="cart-item-remove-btn">
+                <button>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2.00017 11.9998" stroke="#A5A8B9" stroke-width="2.2" stroke-linecap="round"/>
+                    <path d="M12 12L2.00017 2.00024" stroke="#A5A8B9" stroke-width="2.2" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="cart-item" style="overflow-x: hidden;">
+              <div class="cart-item-img">
+                <img src="./img/Rectangle259.svg" alt="">
+              </div>
+              <div class="cart-item-title-weight">
+                <div class="cart-item-title">Овёс "Образ Жизни Алтая" голозёрный</div>
+                <div class="cart-item-weight">500г</div>
+              </div>
+              <div class="cart-item-count-pluse-minus-container">
+                <span class="cart-item-minus-btn">-</span>
+                <input type="text" value="1">
+                <span class="cart-item-plus-btn">+</span>
+              </div>
+              <div class="cart-item-ammount">
+                48 600 <span>AMD</span>
+              </div>
+              <div class="cart-item-remove-btn">
+                <button>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2.00017 11.9998" stroke="#A5A8B9" stroke-width="2.2" stroke-linecap="round"/>
+                    <path d="M12 12L2.00017 2.00024" stroke="#A5A8B9" stroke-width="2.2" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </li>
+          </ul>
+          <div class="empty-cart-content">
+            <img src="./img/Iconbasket(2).svg" alt="basket">
+            <span>Вы пока ничего не <br/> добавили</span>
+          </div>
+        </div>
+        <div class="checkout-info-btn-container">
+          <div class="ammount-content">Позиций добавленно: <span class="count">3</span>  (<span class="weight">4.5 кг</span>)</div>
+          <div class="delivery-content">Доставка: <span class="delivery-ammount">1 700</span> <span>AMD</span></div>
+          <button class="cart-checkout-btn empty-cart">Оформить заказ</button>
+          <button class="cart-checkout-btn">Оформить заказ <span class="ammount">147 500 <span>AMD</span></span></button>
+        </div>
+        
+    </div>
+
+    <div class="order-is-big-modal-content">
+      <span class="close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.9999 2L2.00005 11.9998" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M11.9999 12L2.00005 2.00024" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <div class="order-is-big-modal-title">
+        Заказ слишком большой
+      </div>
+      <div class="order-is-big-modal-text">
+        Проверьте, возможно вы привысили одно из ограничений:
+      </div>
+      <div class="order-is-big-modal-weight">
+        <span>Вес доставки: </span>
+        до 50 кг
+      </div>
+      <div class="order-is-big-modal-ammount">
+        <span>Общая стоимость:</span>
+        до 150 000 ADM
+      </div>
+      <div class="order-is-big-modal-count">
+        <span>Количество:</span>
+        до 30 разных позиций
+      </div>
+      <div class="order-is-big-modal-one-position">
+        <span> Одна позиция:</span>
+        до 15 шт / 50кг
+      </div>
+      <button class="order-is-big-modal-btn">Понятно</button>
+    </div>
+
+    <div class="your-phone-modal-content">
+      <span class="close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.9999 2L2.00005 11.9998" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M11.9999 12L2.00005 2.00024" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <div class="your-phone-modal-title">
+        Пожалуйста, укажите ваш телефон
+      </div>
+      <form action="post">
+        <input type="text" placeholder="+374 номер телефона">
+        <button class="your-phone-modal-btn">Далее</button>
+      </form>
+      <span class="your-phone-modal-policy">Нажимая кнопку «Далее», вы принимаете условия
+        <a href="#">Политикой конфиденциальности</a>
+      </span>
+    </div>
+
+    <div class="your-phone-verification-modal-content">
+      <span class="close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.9999 2L2.00005 11.9998" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M11.9999 12L2.00005 2.00024" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <div class="your-phone-verification-modal-title">
+        Мы отправили код потверждения на номер
+      </div>
+      <div class="your-phone-verification-modal-text">
+        +374 (93) 123-456
+      </div>
+      <form action="post">
+        <input type="text" placeholder="Введите код из смс">
+        <button class="your-phone-modal-btn">Далее</button>
+      </form>
+        <a href="#">Отправить еще раз</a>
+        <a href="#">Вернуться</a>
+
+    </div>
+  </div>
+
+  <div id="error-modal" class="error-modal">
+    <div class="modal-content">
+      <span class="close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.9999 2L2.00005 11.9998" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M11.9999 12L2.00005 2.00024" stroke="#222C54" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+        <div class="error-modal-title">
+          <h4>Обратная связь</h4>
+        </div>
+        <div class="error-modal-text">
+          Смените выбор в каталоге доставки или укажите другое время
+        </div>
+        <button class="error-modal-btn">Понятно</button>
+    </div>
+  </div>
+
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>

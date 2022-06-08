@@ -1,0 +1,428 @@
+
+.header{
+  width: 100%;
+  height: 118px;
+  background-color: $bgColor;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+  .flex-container{
+    margin: 10px 2.65% 0px 19.5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .logo-container{
+    width: 144px;
+    height: 50px;
+    margin-right: 56px;
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+
+      &:active{
+        outline: none;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .delivery-catalog-container{
+    position: relative;
+    display: inline-block;
+
+    .catalog-icon {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
+
+      svg{
+        margin-right: 18px;
+      }
+
+      span {
+        font-weight: 500;
+        color: $textColor;
+        font-size: $textSize;
+      }
+
+     
+    }
+  }
+  .delivery-catalog-contenet {
+    display: none;
+    position: absolute;
+    min-width: 1170px;
+    left: -200px;
+    top: 64px;
+    background: $whiteBgColor;
+    border-radius: $borderRadius;
+    filter: drop-shadow(0px 60px 100px rgba(71, 0, 95, 0.12));
+    z-index: 1;
+    padding: 40px 30px 40px 58px;
+
+    &::before{
+      content: '';
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 17px 17px 17px;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: #fff;
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      top: -16px;
+      left: 250px;
+      margin: 0 auto;
+    }
+    &.show {
+      display: flex;
+    }
+  }
+}
+
+.delivery-catalog-contenet {
+  display: flex;
+
+  .catalog-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 60px;
+
+    .btn{
+      font-size: $textSize;
+      font-weight: 500;
+      line-height: 24px;
+      color: $textColor;
+      border: none;
+      background-color: transparent;
+      margin-bottom: 30px;
+      cursor: pointer;
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      &.active {
+        color: #12B575;
+      }
+    }
+  }
+}
+
+.filtered-container {
+  display: flex;
+  width: 870px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  .filtered-div {
+    width: 127px;
+    height: 86px;
+    background-color: $bgColor;
+    border-radius: $borderRadius;
+    padding: 24px 34px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    
+    &:first-of-type{
+      margin-top: 0;
+      margin-left: 0;
+    }
+    &:nth-of-type(2),
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      margin-top: 0;
+    }
+    &:nth-of-type(4),
+    &:nth-of-type(8){
+      margin-right: 0;
+    }
+    &:nth-of-type(5){
+      margin-left: 0;
+    }
+    &:nth-of-type(5),
+    &:nth-of-type(6),
+    &:nth-of-type(7) {
+      margin-bottom: 0;
+    }
+    &:nth-of-type(8){
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      background-color: $whiteBgColor;
+      box-shadow: 0px 40px 120px rgba(71, 0, 95, 0.14);
+    }
+    &.show {
+      display: block;
+    }
+    
+    &.remove {
+      display: none;
+    }
+  }
+}
+
+.catalog-close-btn-container {
+  width: 40px;
+  height: 40px;
+  background: $bgColor;
+  border-radius: $borderRadius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+
+  svg {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.trucking {
+  a{
+    font-size: $textSize;
+    color: #B23FAD;
+    font-weight: 500;
+    line-height: 19px;
+    margin-left: 36px;
+    text-decoration: none;
+  }
+}
+
+.phone-address-container{
+  margin-left: 217px;
+  display: flex;
+  align-items: center;
+
+  .phone-container {
+    margin-right: 32px;
+    a{
+      font-weight: 500;
+      font-size: 18px;
+      color: $textColor;
+      line-height: 21px;
+      text-decoration: none;
+    }
+  }
+
+  .address-container{
+    margin-right: 33px;
+    position: relative;
+
+    ::selection{
+      color: #12B575;
+    }
+
+    .city-content{
+      display: none;
+      background: $whiteBgColor;
+      border-radius: $borderRadius;
+      position: absolute;
+      min-width: 240px;
+      top: 64px;
+      left: -50%;
+      z-index: 10;
+
+      &::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 0 17px 17px 17px;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        top: -16px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+     }
+     .options{
+      padding: 31px 44px 26px;
+      display: none;
+
+      &.show {
+        display: block;
+      }
+
+      li{
+        height: 40px;
+        font-size: $textSize;
+        text-align: center;
+      }
+
+      li:hover, 
+      li.selected{
+        color: #12B575;
+      }
+
+      p{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        color: $textColor;
+        margin-bottom: 14px;
+      }
+
+    }
+
+    }
+
+
+    .city-wrapper{
+      .city-select-btn {
+        color: $textColor;
+        font-size: $textSize;
+        line-height: 18px;
+        font-weight: 500;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .is-city-content{
+        padding: 40px 26px 40px;
+        width: 325px;
+        height: 171px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        display: none;
+        &.show{
+          display: flex;
+        }
+      }
+
+      .is-city-title{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        color: $textColor;
+      }
+
+      .is-city-buttons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 16px;
+
+        .btn {
+          width: 150px;
+          height: 54px;
+          border-radius: $btnBorderRadius;
+          border: none;
+          font-size: $textSize;
+          font-weight: 700;
+          line-height: 30px;
+
+          &.green{
+            background: $btnBgColor;
+            color: $whiteTextColor;
+          }
+          &.gray{
+            background: $grayBgColor;
+            color: $textColor;
+          }
+        }
+      }
+      .is-city-text{
+        max-width: 250px;
+        font-weight: 400;
+        font-size: $textSize15;
+        line-height: 22px;
+        text-align: center;
+        color: $brightTextColor;
+      }
+
+      &.active .city-content{
+        display: block;
+      }
+    }
+  }
+  #cover{
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(5, 5, 5, 0.15);;
+    z-index:5;
+    width:100%;
+    height:100%;
+    display:none;
+  }
+  .city-wrapper.active + #cover{
+    display:block;
+    opacity:2;
+  }
+
+  .cart-container{
+    width: 60px;
+    height: 60px;
+    border-radius: 87px;
+    background-color: $grayBgColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .cart-btn{
+      cursor: pointer;
+    }
+
+    svg{
+      width: 24px;
+      height: 20px;
+      object-fit: cover;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 25px;
+      height: 25px;
+      background-color: #F62658;
+      border-radius: 50%;
+      color: $whiteTextColor;
+      text-align: center;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 26px;
+    }
+  }
+}
+
+.lang-container{
+  margin-left: auto;
+
+  span{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    color: $textColor;
+  }
+}
